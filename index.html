@@ -122,6 +122,57 @@ input:checked~.jb1{
     width: auto;
   }
 }
+.element{
+  -webkit-animation:tutsFade 4s 1s infinite linear alternate;
+  -moz-animation:tutsFade 4s 1s infinite linear alternate;
+  -ms-animation:tutsFade 4s 1s infinite linear alternate;
+  -o-animation:tutsFade 4s 1s infinite linear alternate;
+}
+@keyframes tutsFade {
+to{
+opacity: 0;
+}
+}
+@keyframes tutsRotate{
+to{
+transform: rotate(180deg);
+}
+}
+.ani{
+  width: 200px;
+  height: 200px;
+  background-color:coral;
+  animation: square-to-circle 2s 1s infinite cubic-bezier(1,.01,.41,1.03) alternate;
+margin: 80px;
+}
+@-webkit-keyframes square-to-circle {
+  0%{
+    border-radius:0 0 0 0;
+    background:coral;
+    transform:rotate(0deg);
+  }
+  25%{
+    border-radius:50% 0 0 0;
+    background:darksalmon;
+    transform:rotate(45deg);
+  }
+  50%{
+    border-radius:50% 50% 0 0;
+    background:indianred;
+    transform:rotate(90deg);
+  }
+  75%{
+    border-radius:50% 50% 50% 0;
+    background:lightcoral;
+    transform:rotate(135deg);
+  }
+  100%{
+    border-radius:50%;
+    background:darksalmon;
+    transform:rotate(180deg);
+  }
+}
+
 </style>
   </head>
   <body>
@@ -151,8 +202,9 @@ input:checked~.jb1{
           <div class="jb1 duration1"></div>
       </div>
       <div class="footer">
-        <p>Copyright alrights reserved.jungwonpark</p>
+        <p>Copyright alrights reserved by jungwonpark</p>
       </div>
-  </div>
-  </body>
+      <div class="ani">
+      </div>
+</body>
 </html>
